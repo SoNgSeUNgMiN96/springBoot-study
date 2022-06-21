@@ -29,7 +29,7 @@ public class HelloController {
     }
 
     @GetMapping("hello-api")
-    @ResponseBody       //직접 바디에 넣어줌 그대로내려감.
+    @ResponseBody       //직접 바디에 넣어줌 그대로내려감.  컨트롤 N 게터세터 콘스트럭터
     public Hello helloApi(@RequestParam("name") String name){
         Hello hello = new Hello();
         hello.setName(name);

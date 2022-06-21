@@ -16,6 +16,7 @@ class MemoryMemberRepositoryTest {
     public void afterEach(){
         repository.clearStore();
     }
+
     @Test
     public void save(){
         Member member = new Member();
@@ -39,7 +40,7 @@ class MemoryMemberRepositoryTest {
         member2.setName("spring2");
         repository.save(member2);
 
-        //return type이 Optional이기때문에 .get()으로 한 번 까줘야 됨.
+        //return type이 Optional이기때문에 .get()으로 한 번 까줘야 됨.  쉬프트 F6이름 전체변경
         Member result = repository.findByName("spring1").get();
 
         assertThat(result).isEqualTo(member1);
